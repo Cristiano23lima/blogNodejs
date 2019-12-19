@@ -1,0 +1,7 @@
+<h4>Categorias: </h4>
+<ul class="list-group list-group-flush">
+    {{#each categorias}}
+        <li class="list-group-item"><a href="/categorias/{{slug}}" style="text-decoration: none;">{{nome}}</a></li>
+    {{else}}
+    {{/each}}
+</ul>

@@ -1,0 +1,16 @@
+<h2 style="text-transform: capitalize;">{{categoria.nome}}</h2>
+<hr>
+
+{{#each postagens}}
+    <div class="card mb-4">
+        <div class="card-body">
+            <h3>{{titulo}}</h3>
+            <p>{{descricao}}</p>
+            <a href="/postagem/{{slug}}" class="btn btn-success">Leia mais</a>
+            <hr>
+            <small>data da postagem: {{#formatDate data}}{{/formatDate}}</small>
+        </div>
+    </div>
+{{else}}
+    <div class="alert alert-warning"><i class="fa fa-exclamation-circle"></i> Nenhuma postagem para essa categoria</div>
+{{/each}}
